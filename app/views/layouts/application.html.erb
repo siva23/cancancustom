@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cancancustom</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%=flash[:notice]%>
+<%=flash[:alert]%>
+<%=link_to "#{current_user.email }>>logout", destroy_user_session_path, :method => :delete if current_user%>
+<%= yield %>
+
+</body>
+</html>
