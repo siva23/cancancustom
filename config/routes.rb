@@ -1,4 +1,5 @@
 Cancancustom::Application.routes.draw do
+  get "home/index"
   resources :products
 
   devise_for :users
